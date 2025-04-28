@@ -15,9 +15,6 @@ public class Quiz {
     int nextQuestion = 0;
 
     public Quiz() {
-        EntityManager em = Persistence.createEntityManagerFactory("demo").createEntityManager();
-        TypedQuery<Question> query = em.createQuery("SELECT q FROM Question q ", Question.class);
-        List<Question> questions = query.getResultList();
 
     }
 

@@ -1,5 +1,6 @@
 package at.spengergasse;
 
+import at.spengergasse.entities.Answer;
 import at.spengergasse.entities.Question;
 
 import javax.persistence.EntityManager;
@@ -17,6 +18,13 @@ public class Main {
 
         for (Question q : questions) {
             System.out.println(q);
+        }
+
+        TypedQuery<Answer> query2 = em.createQuery("SELECT a FROM Answer a ", Answer.class);
+        List<Answer> answers = query2.getResultList();
+
+        for (Answer a : answers) {
+            System.out.println(a);
         }
 
         em.close();

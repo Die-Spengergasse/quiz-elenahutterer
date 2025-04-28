@@ -22,6 +22,11 @@ public class Question {
                 '}';
     }
 
+    public static boolean QuestionsAndAnswers()
+    {
+        return false;
+    };
+
     public int getId() {
         return id;
     }
